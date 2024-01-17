@@ -140,7 +140,10 @@ const AccomodationsForm = () => {
                 <div key={link} className='flex h-32'>
                   <img
                     className='rounded-2xl h-full w-full object-cover '
-                    src={"http://localhost:4000/uploads/" + link}
+                    src={
+                      "https://airbnb-clone-backend-ysry.onrender.com/uploads/" +
+                      link
+                    }
                   />
                   <button
                     onClick={e => {

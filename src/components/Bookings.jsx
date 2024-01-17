@@ -31,7 +31,8 @@ const Bookings = () => {
                   loading='lazy'
                   className='object-cover'
                   src={
-                    "http://localhost:4000/uploads/" + place?.place?.photos[0]
+                    "https://airbnb-clone-backend-ysry.onrender.com/uploads/" +
+                    place?.place?.photos[0]
                   }
                 />
               )}

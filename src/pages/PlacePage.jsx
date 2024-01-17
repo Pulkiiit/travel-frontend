@@ -187,7 +187,7 @@ const PlacePage = () => {
               <div key={photo}>
                 <img
                   loading='lazy'
-                  src={`http://localhost:4000/uploads/${photo}`}
+                  src={`https://airbnb-clone-backend-ysry.onrender.com/uploads/${photo}`}
                 />
               </div>
             ))}
@@ -239,7 +239,7 @@ const PlacePage = () => {
                       setShowPhotos(true);
                     }}
                     className='aspect-square object-cover cursor-pointer '
-                    src={`http://localhost:4000/uploads/${place.photos[0]}`}
+                    src={`https://airbnb-clone-backend-ysry.onrender.com/uploads/${place.photos[0]}`}
                   />
                 </div>
               )}
@@ -252,7 +252,7 @@ const PlacePage = () => {
                     setShowPhotos(true);
                   }}
                   className='aspect-square object-cover cursor-pointer '
-                  src={`http://localhost:4000/uploads/${place.photos[1]}`}
+                  src={`https://airbnb-clone-backend-ysry.onrender.com/uploads/${place.photos[1]}`}
                 />
               )}
               {place.photos?.[2] && (
@@ -263,7 +263,7 @@ const PlacePage = () => {
                       setShowPhotos(true);
                     }}
                     className='aspect-square object-cover  cursor-pointer relative top-2'
-                    src={`http://localhost:4000/uploads/${place.photos[2]}`}
+                    src={`https://airbnb-clone-backend-ysry.onrender.com/uploads/${place.photos[2]}`}
                   />
                 </div>
               )}
