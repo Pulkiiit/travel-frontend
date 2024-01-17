@@ -48,7 +48,7 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     const getClient = async () => {
-      if (!client._id) {
+      if (!client?._id) {
         const { data } = await axios.get("/profile");
         dispatch(clientActions.setClient(data));
       }
