@@ -18,7 +18,7 @@ import AccomodationsPage from "./components/AccomodationsPage";
 import AccomodationsForm from "./components/AccomodationsForm";
 import Bookings from "./components/Bookings";
 import PlacePage from "./pages/PlacePage";
-axios.defaults.baseURL = "https://airbnb-clone.up.railway.app";
+axios.defaults.baseURL = "https://airbnb-clone-backend-ysry.onrender.com";
 axios.defaults.withCredentials = true;
 
 const router = createBrowserRouter(
