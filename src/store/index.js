@@ -53,7 +53,7 @@ const placeSlice = createSlice({
     },
     removeAddedPhotos(state, action) {
       state.addedPhotos = state.addedPhotos.filter(
-        photo => photo.name !== action.payload
+        photo => photo !== action.payload
       );
     },
     setPhotoLink(state, action) {

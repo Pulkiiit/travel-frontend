@@ -53,10 +53,7 @@ const AccomodationsPage = () => {
                   <img
                     loading='lazy'
                     className='object-cover'
-                    src={
-                      "https://airbnb-clone-backend-ysry.onrender.com/uploads/" +
-                      place.photos[0]
-                    }
+                    src={place.photos[0]}
                   />
                 )}
               </div>

@@ -35,7 +35,7 @@ const AccomodationsForm = () => {
     const { data: fileName } = await axios.post("/upload-link", {
       link: place.photoLink,
     });
-    dispatch(placeActions.setAddedPhotos(fileName.name));
+    dispatch(placeActions.setAddedPhotos(fileName));
     dispatch(placeActions.setPhotoLink(""));
   };
 
@@ -137,13 +137,10 @@ const AccomodationsForm = () => {
           <div className='grid gap-2 grid-cols-3 lg:grid-cols-6 md:grid-cols-4 mt-2'>
             {place.addedPhotos.length > 0 &&
               place.addedPhotos.map(link => (
-                <div key={link} className='flex h-32'>
+                <div key={Math.random()} className='flex h-32'>
                   <img
                     className='rounded-2xl h-full w-full object-cover '
-                    src={
-                      "https://airbnb-clone-backend-ysry.onrender.com/uploads/" +
-                      link
-                    }
+                    src={link}
                   />
                   <button
                     onClick={e => {

@@ -21,10 +21,7 @@ const IndexPage = () => {
                 <img
                   loading='lazy'
                   className='rounded-2xl aspect-square object-cover'
-                  src={
-                    "https://airbnb-clone-backend-ysry.onrender.com/uploads/" +
-                    place?.photos?.[0]
-                  }
+                  src={place?.photos?.[0]}
                 />
               )}
             </div>

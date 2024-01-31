@@ -37,7 +37,7 @@ const BookingBox = ({ place, id, maxGuests }) => {
 
       // creating a new order
 
-      const result = await axios.post("http://localhost:4000/payment", {
+      const result = await axios.post("/payment", {
         price: place.price * days,
       });
 
@@ -65,10 +65,7 @@ const BookingBox = ({ place, id, maxGuests }) => {
             razorpaySignature: response.razorpay_signature,
           };
 
-          const result = await axios.post(
-            "http://localhost:4000/payment/success",
-            data
-          );
+          const result = await axios.post("/payment/success", data);
 
           alert(result.data.msg);
         },

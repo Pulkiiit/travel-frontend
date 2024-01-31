@@ -8,31 +8,33 @@ const BookingModal = ({ closeModal, place, price }) => {
   }, [place]);
   return (
     <div
-      className='fixed inset-0 bg-black bg-opacity-20 backdrop-blur-sm flex justify-center items-center'
+      className='fixed inset-0 bg-black bg-opacity-20 backdrop-blur-sm flex  justify-center items-center overflow-y-scroll'
       onClick={closeModal}
     >
       <div className='bg-white p-4 rounded '>
         <h2 className='text-2xl font-semibold bg-primary rounded-md p-2 text-white my-2 mx-5 text-center'>
           Bookings
         </h2>
-        <div>
-          {bookings &&
-            bookings.length > 0 &&
+        <ul>
+          {bookings ? (
             bookings.map(booking => (
-              <div
+              <li
                 key={booking._id}
-                className='border-4 border-gray-700 p-4 rounded'
+                className='border-4 border-gray-700 p-4 rounded m-4'
               >
                 <h1 className='text-lg'>{booking.client.name}</h1>
-                <p>
+                <p className=''>
                   {`From : ${booking.from}`}
                   {`To : ${booking.to}`}
                   {booking.guests}
                   {price * booking.days}
                 </p>
-              </div>
-            ))}
-        </div>
+              </li>
+            ))
+          ) : (
+            <div>No Bookings yet</div>
+          )}
+        </ul>
       </div>
     </div>
   );
