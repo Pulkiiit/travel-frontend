@@ -44,9 +44,9 @@ const AccomodationsPage = () => {
           places.length > 0 &&
           places.map(place => (
             <Link
-              to={"/account/accomodations/" + place._id}
+              to={"/account/accomodations/" + place?._id}
               className='flex gap-4 mt-4 bg-gray-200 p-4 rounded-2xl cursor-pointer'
-              key={place._id}
+              key={place?._id}
             >
               <div className='flex w-32 h-32 bg-gray-300  grow shrink-0'>
                 {place.photos && place.photos.length > 0 && (
@@ -64,7 +64,7 @@ const AccomodationsPage = () => {
               <button
                 onClick={e => {
                   e.preventDefault();
-                  setPlaceId(place._id);
+                  setPlaceId(place?._id);
                   setPrice(place.price);
                   setShowModal(true);
                 }}
